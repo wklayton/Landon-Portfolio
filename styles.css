@@ -298,7 +298,7 @@
     margin-top: 1rem;
     display: flex;
     width: 100%;
-    overflow-x: auto;
+    overflow-x: hidden;
   }
 
   #portfolio .carousel::-webkit-scrollbar {
