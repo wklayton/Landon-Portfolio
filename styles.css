@@ -60,8 +60,8 @@
   }
 
   ::selection {
-    background-color: var(--pink);
-    color: var(--white);
+    background-color: var(--orange);
+    color: var(--black);
   }
   
   body {
@@ -468,4 +468,23 @@
   .quals_btns.btn_active {
     z-index: 3;
     cursor:auto;
+  }
+
+
+  /* CONTACT */
+
+  /* Mobile */
+
+  #contact {
+    background-color: var(--white);
+    position: relative;
+    z-index: 10;
+  }
+
+  /* FOOTER */
+
+  footer {
+    position: relative;
+    z-index: 10;
+    background-color: var(--white);
   }
