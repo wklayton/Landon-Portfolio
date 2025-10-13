@@ -132,6 +132,12 @@
     height: auto;
   }
 
+  #navbar .sig_img {
+    visibility: hidden;
+    display: none;
+    width: 0;
+  }
+
   #navbar .menu {
     width: fit-content;
     margin-left: auto;
@@ -153,6 +159,13 @@
   @media only screen and (min-width: 1200px){
     #navbar {
         padding: 0 8rem;
+    }
+
+    #navbar .sig_img {
+      visibility: visible;
+      display: block;
+      width: 8rem;
+      height: auto;
     }
   }
 
