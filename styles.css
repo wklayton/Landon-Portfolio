@@ -128,6 +128,8 @@
 
   #navbar .home_img {
     color: var(--white);
+    width: 2.5rem;
+    height: auto;
   }
 
   #navbar .menu {
