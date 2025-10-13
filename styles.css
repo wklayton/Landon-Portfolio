@@ -439,6 +439,7 @@
 
   .quals_btns_container {
     display: grid;
+    gap: 0.25rem;
     width: 100%;
     grid-template-columns: auto auto auto;
   }
