@@ -424,7 +424,6 @@
   #qualifications .quals {
     margin: 0 auto;
     visibility: hidden;
-    width: 0;
     height: 0;
   }
 
@@ -515,3 +514,43 @@
   /* CONTACT */
 
   /* Mobile */
+
+  #contact {
+    background-color: var(--orange);
+    width: 100%;
+    margin: 3rem 0 0;
+    padding: 1rem 0 3rem;
+    border-radius: 50% 50% 0 0;
+  }
+
+  #contact h2 {
+    width: fit-content;
+    display: block;
+    margin: 3rem auto 2rem;
+    font-size: 2rem;
+  }
+
+  #contact a {
+    width: fit-content;
+    margin: 0 auto;
+    display: block;
+    font-size: 1.1rem;
+  }
+
+
+  /* FOOTER */
+
+  /* Mobile */
+
+  #foot {
+    background-color: var(--orange);
+    padding: 1rem 0;
+  }
+
+  #foot .s_links {
+    color: var(--black);
+    width: fit-content;
+    display: block;
+    margin: 0 auto;
+    font-weight: 700;
+  }
