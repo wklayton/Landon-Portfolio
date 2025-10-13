@@ -1,54 +1,57 @@
-const qualsSection = document.getElementById("qualifications")
+const qualsSection = document.getElementById("qualifications");
 
-const pinkBtn = document.querySelector(".quals_pink")
-const blueBtn = document.querySelector(".quals_blue")
-const greenBtn = document.querySelector(".quals_green")
+const pinkText = document.querySelector(".quals_pink");
+const blueText = document.querySelector(".quals_blue");
+const greenText = document.querySelector(".quals_green");
+
+const pinkBtn = document.querySelector(".quals_btn_pink");
+const blueBtn = document.querySelector(".quals_btn_blue");
+const greenBtn = document.querySelector(".quals_btn_green");
 
 function pinkButton() {
-    console.log(pinkBtn);
-    if (pinkBtn.classList.contains("active") === true) {
-        console.log(`Hello World`)
-    } else {
-        console.log(`Goodbye`)
-        pinkBtn.classList.add("active")
-        blueBtn.classList.remove("active")
-        greenBtn.classList.remove("active")
+    if (pinkText.classList.contains("active") !== true) {
+            pinkText.classList.add("active");
+            blueText.classList.remove("active");
+            greenText.classList.remove("active");
 
-        qualsSection.classList.add("pink_active")
-        qualsSection.classList.remove("blue_active")
-        qualsSection.classList.remove("green_active")
+            qualsSection.classList.add("pink_active");
+            qualsSection.classList.remove("blue_active");
+            qualsSection.classList.remove("green_active");
+
+            pinkBtn.classList.add("btn_active");
+            blueBtn.classList.remove("btn_active");
+            greenBtn.classList.remove("btn_active");
     }
-
 }
 
 function blueButton() {
-    console.log(blueBtn);
-    if (blueBtn.classList.contains("active") === true) {
-        console.log(`Hello World`)
-    } else {
-        console.log(`Goodbye`)
-        blueBtn.classList.add("active")
-        pinkBtn.classList.remove("active")
-        greenBtn.classList.remove("active")
+    if (blueText.classList.contains("active") !== true) {
+            blueText.classList.add("active");
+            pinkText.classList.remove("active");
+            greenText.classList.remove("active");
 
-        qualsSection.classList.add("blue_active")
-        qualsSection.classList.remove("pink_active")
-        qualsSection.classList.remove("green_active")
+            qualsSection.classList.add("blue_active");
+            qualsSection.classList.remove("pink_active");
+            qualsSection.classList.remove("green_active");
+
+            blueBtn.classList.add("btn_active");
+            pinkBtn.classList.remove("btn_active");
+            greenBtn.classList.remove("btn_active");
     }
 }
 
 function greenButton() {
-    console.log(greenBtn);
-    if (greenBtn.classList.contains("active") === true) {
-        console.log(`Hello World`)
-    } else {
-        console.log(`Goodbye`)
-        greenBtn.classList.add("active")
-        pinkBtn.classList.remove("active")
-        blueBtn.classList.remove("active")
+    if (greenText.classList.contains("active") !== true) {
+            greenText.classList.add("active");
+            pinkText.classList.remove("active");
+            blueText.classList.remove("active");
 
-        qualsSection.classList.add("green_active")
-        qualsSection.classList.remove("pink_active")
-        qualsSection.classList.remove("blue_active")
+            qualsSection.classList.add("green_active");
+            qualsSection.classList.remove("pink_active");
+            qualsSection.classList.remove("blue_active");
+
+            greenBtn.classList.add("btn_active");
+            pinkBtn.classList.remove("btn_active");
+            blueBtn.classList.remove("btn_active");
     }
 }

@@ -386,6 +386,9 @@
   #qualifications {
     width: 100%;
     padding: 3rem 0;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0.25rem 1rem 5rem var(--black);
   }
 
   #qualifications.pink_active {
@@ -411,7 +414,7 @@
   }
 
   #qualifications .quals {
-    margin: 1rem auto;
+    margin: 0 auto;
     visibility: hidden;
     width: 0;
     height: 0;
@@ -421,6 +424,7 @@
     visibility: visible;
     width: fit-content;
     height: fit-content;
+    margin-top: 1rem;
   }
 
   #qualifications .quals h3 {
@@ -433,9 +437,20 @@
     text-align: center;
   }
 
+  .quals_btns_container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto auto;
+  }
+
   .quals_btns {
+    width: 100%;
     padding: 2rem 3rem;
-    border-radius: 0 0 1rem 4rem;
+    margin: 0 auto;
+    border-radius: 2rem 2rem 0 0;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
   }
 
   .quals_btn_pink {
@@ -448,4 +463,9 @@
 
   .quals_btn_green {
     background-color: var(--green);
+  }
+
+  .quals_btns.btn_active {
+    z-index: 3;
+    cursor:auto;
   }
