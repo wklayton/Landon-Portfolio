@@ -377,3 +377,75 @@
         gap: 4rem;
     }
   }
+
+
+  /* QUALIFICATIONS */
+
+  /* Mobile */
+
+  #qualifications {
+    width: 100%;
+    padding: 3rem 0;
+  }
+
+  #qualifications.pink_active {
+    background-color: var(--pink);
+  }
+
+  #qualifications.blue_active {
+    background-color: var(--blue);
+  }
+
+  #qualifications.green_active {
+    background-color: var(--green);
+  }
+
+  #qualifications .quals_container {
+    margin: 0 2rem;
+    height: 15rem
+  }
+
+  #qualifications h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  #qualifications .quals {
+    margin: 1rem auto;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+
+  #qualifications .quals.active {
+    visibility: visible;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  #qualifications .quals h3 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  #qualifications .quals p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .quals_btns {
+    padding: 2rem 3rem;
+    border-radius: 0 0 1rem 4rem;
+  }
+
+  .quals_btn_pink {
+    background-color: var(--pink);
+  }
+
+  .quals_btn_blue {
+    background-color: var(--blue);
+  }
+
+  .quals_btn_green {
+    background-color: var(--green);
+  }
