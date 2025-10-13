@@ -569,7 +569,7 @@
 
   #contact .submit_btn {
     display: block;
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
     background-color: var(--green);
     padding: 0.5rem 3rem;
