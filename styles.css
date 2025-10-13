@@ -464,6 +464,7 @@
     z-index: 1;
     cursor: pointer;
     box-shadow: 0 -2.5rem 2rem -2rem rgba(21, 21, 21, 0.5) inset;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .quals_btn_pink {
