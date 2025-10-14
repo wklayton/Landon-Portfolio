@@ -325,15 +325,15 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  padding-right: 1rem;
+  gap: 1em;
+  padding-right: 1em;
   animation: spin 15s infinite linear;
 }
 
 #portfolio .card {
-  flex: 0 0 15rem;
-  height: 15rem;
-  padding: 1rem;
+  flex: 0 0 15em;
+  height: 15em;
+  padding: 1em;
   border-radius: 50%;
   background-color: var(--orange);
   text-align: center;
