@@ -407,11 +407,6 @@ ul {
   border-radius: 0 0 2rem 2rem;
 }
 
-#qualifications .quals_container {
-  margin: 0;
-  height: 15rem
-}
-
 #qualifications h2 {
   font-size: 2rem;
   text-align: center;
@@ -422,6 +417,12 @@ ul {
   width: 90%;
   margin: 0 auto;
 }
+#qualifications .quals_container {
+  margin: 0;
+  height: 15rem
+}
+
+
 
 #qualifications .quals {
   position: absolute;
@@ -476,14 +477,14 @@ ul {
   text-align: center;
 }
 
-.quals_btns_container {
+#qualifications .quals_btns_container {
   width: 100%;
   display: grid;
   gap: 1.25%;
   grid-template-columns: 32.5% 32.5% 32.5%;
 }
 
-.quals_btns {
+#qualifications .quals_btns {
   width: 100%;
   padding: 1rem 0;
   color: var(--white);
@@ -498,19 +499,19 @@ ul {
   -webkit-tap-highlight-color: transparent;
 }
 
-.quals_btn_pink {
+#qualifications .quals_btn_pink {
   background-color: var(--pink);
 }
 
-.quals_btn_blue {
+#qualifications .quals_btn_blue {
   background-color: var(--blue);
 }
 
-.quals_btn_green {
+#qualifications .quals_btn_green {
   background-color: var(--green);
 }
 
-.quals_btns.btn_active {
+#qualifications .quals_btns.btn_active {
   z-index: 3;
   cursor:auto;
   box-shadow: none;
@@ -518,8 +519,13 @@ ul {
 
 /* Desktop */
 @media only screen and (min-width:1200px) {
-  .quals_btns_container {
+  #qualifications .quals_folder{
+    width: 100%;
+  }
+
+  #qualifications .quals_btns_container {
     width: 50%;
+    margin-left: 12.5%;
   }
 
   #qualifications .quals_green {
@@ -532,18 +538,24 @@ ul {
     border-radius: 2rem 2rem 2rem 2rem;
   }
 
-  .quals_btns {
+  #qualifications .quals_btns {
     font-size: 1.1rem;
+  }
+
+  #qualifications .quals {
+    width: 75%;
+    height: 20rem;
+  }
+
+  #qualifications .quals_container {
+    width: 75%;
+    margin: 0 auto 10rem;
   }
 }
 
 @media only screen and (min-width:1800px) {
-  .quals_btns {
+  #qualifications .quals_btns {
     font-size: 1.2rem;
-  }
-
-  .quals_folder {
-    width: 75%;
   }
 }
 
