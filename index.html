@@ -14,8 +14,10 @@
     <body>
         <header>
             <nav id="navbar">
-                <a href="#"><img alt="Home" src="assets/crown_home.svg" class="home_img" width="50" height="50"></a>
-                <a href="#"><img alt="Home" src="assets/sig_home.svg" class="sig_img" width="50" height="50"></a>
+                <a href="#" class="home_pic_link">
+                    <img alt="Home" src="assets/crown_home.svg" class="home_img" width="50" height="50">
+                    <img alt="Home" src="assets/sig_home.svg" class="sig_img" width="50" height="50">
+                </a>
                 <ul class="menu">
                     <li><a href="#" class="nav_item">Home</a></li>
                     <li><a href="#" class="nav_item">Portfolio</a></li>
@@ -29,8 +31,12 @@
                     <p class="job_title">Game Designer</p>
                     <h1 class="name">Landon Layton</h1>
                     <div class="socials">
-                        <a href="#"><img alt="LinkedIn" src="#"></a>
-                        <a href="#"><img alt="Email" src="#"></a>
+                        <a href="mailto:landonlay48@gmail.com">
+                            <svg class="e_svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7" stroke-width="1.5"></path> <rect x="3" y="5" width="18" height="14" rx="2" stroke-width="2.5"></rect></g></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/landonlaygamedesign" target="_blank">
+                            <svg class="l_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 552.77 552.77"><g><path d="M17.95,528.854h71.861c9.914,0,17.95-8.037,17.95-17.951V196.8c0-9.915-8.036-17.95-17.95-17.95H17.95 C8.035,178.85,0,186.885,0,196.8v314.103C0,520.816,8.035,528.854,17.95,528.854z"></path> <path d="M17.95,123.629h71.861c9.914,0,17.95-8.036,17.95-17.95V41.866c0-9.914-8.036-17.95-17.95-17.95H17.95 C8.035,23.916,0,31.952,0,41.866v63.813C0,115.593,8.035,123.629,17.95,123.629z"></path> <path d="M525.732,215.282c-10.098-13.292-24.988-24.223-44.676-32.791c-19.688-8.562-41.42-12.846-65.197-12.846 c-48.268,0-89.168,18.421-122.699,55.27c-6.672,7.332-11.523,5.729-11.523-4.186V196.8c0-9.915-8.037-17.95-17.951-17.95h-64.192 c-9.915,0-17.95,8.035-17.95,17.95v314.103c0,9.914,8.036,17.951,17.95,17.951h71.861c9.915,0,17.95-8.037,17.95-17.951V401.666 c0-45.508,2.748-76.701,8.244-93.574c5.494-16.873,15.66-30.422,30.488-40.649c14.83-10.227,31.574-15.343,50.24-15.343 c14.572,0,27.037,3.58,37.393,10.741c10.355,7.16,17.834,17.19,22.436,30.104c4.604,12.912,6.904,41.354,6.904,85.33v132.627 c0,9.914,8.035,17.951,17.949,17.951h71.861c9.914,0,17.949-8.037,17.949-17.951V333.02c0-31.445-1.982-55.607-5.941-72.48 S535.836,228.581,525.732,215.282z"></path></g></svg>
+                        </a>
                     </div>
                 </div>
                 <div class="w_right">
@@ -40,43 +46,23 @@
 
             <section id="portfolio">
                 <h2>Portfolio</h2>
-                <div class="carousel">
-                    <div class="cards_container">
-                        <section class="card pre1" data-active>
-                            <h3>Boogie Beasts</h3>
-                            <img alt="GIF of Boogie Beasts">
-                            <p>Boooogie</p>
-                        </section>
-                        <section class="card pre2">
-                            <h3>Clockwork Corridor</h3>
-                            <img alt="Video of Clockwork" src="#">
-                            <p>Welcome my Guests</p>
-                        </section>
-                        <section class="card pre3">
-                            <h3>Preview 3</h3>
-                            <img alt="Pre 3" src="#">
-                            <p>This is rad</p>
-                        </section>
-                    </div>
-                    <div class="cards_container carousel_extra" aria-hidden>
-                        <section class="card pre1" data-active>
-                            <h3>Boogie Beasts</h3>
-                            <img alt="GIF of Boogie Beasts">
-                            <p>Boooogie</p>
-                        </section>
-                        <section class="card pre2">
-                            <h3>Clockwork Corridor</h3>
-                            <img alt="Video of Clockwork" src="#">
-                            <p>Welcome my Guests</p>
-                        </section>
-                        <section class="card pre3">
-                            <h3>Preview 3</h3>
-                            <img alt="Pre 3" src="#">
-                            <p>This is rad</p>
-                        </section>
-                    </div>
+                <div class="cards_container">
+                    <section class="card pre1">
+                        <h3>Boogie Beasts</h3>
+                        <p>Boooogie</p>
+                        <a href="#" class="v_more">View More</a>
+                    </section>
+                    <section class="card pre2">
+                        <h3>Clockwork Corridor</h3>
+                        <p>Welcome my Guests</p>
+                        <a href="#" class="v_more">View More</a>
+                    </section>
+                    <section class="card pre3">
+                        <h3>Preview 3</h3>
+                        <p>This is rad</p>
+                        <a href="#" class="v_more">View More</a>
+                    </section>
                 </div>
-                <a href="#" class="v_more">View More</a>
             </section>
     
             <section id="qualifications">
@@ -105,27 +91,35 @@
                     </div>
                 </section>
             </div>
-            
 
             <section id="contact">
-                <h2>Get in Touch</h2>
+                <div class="contact_head">
+                    <img alt="Landon Layton" src="assets/crown_home.png">
+                    <h2>Get in Touch</h2>
+                </div>
                 <form action="https://api.web3forms.com/submit" method="POST" class="contact_form">
                     <input type="hidden" name="access_key" value="f0649350-7ed7-4e73-8630-e7a0a6da2398">
 
-                    <div class="name_inputs">
+                    <!-- <div class="name_inputs">
                         <input type="text" name="first_name" placeholder="First Name*" class="contact_inputs" required>
                         <input type="text" name="last_name" placeholder="Last Name*" class="contact_inputs" required>
-                    </div>
-                    <input type="email" name="email" placeholder="Email*" class="contact_inputs" required>
-                    <textarea name="message" placeholder="Message*" class="contact_inputs" required></textarea>
+                    </div> -->
+                    
+                    <input type="email" name="email" placeholder="Email*" class="contact_inputs email_input" required>
+                    <textarea name="message" placeholder="Message (optional)" class="contact_inputs textarea_input"></textarea>
+                    
                     <button type="submit" class="submit_btn">Submit</button>
                 </form>
             </section>
         </main>
         <footer id="foot">
             <div class="s_links">
-                <img alt="email" src="#">
-                <img alt="linkedin" src="#">
+                <a href="mailto:landonlay48@gmail.com">
+                    <svg class="e_svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7" stroke-width="1.5"></path> <rect x="3" y="5" width="18" height="14" rx="2" stroke-width="2.5"></rect></g></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/landonlaygamedesign" target="_blank">
+                    <svg class="l_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 552.77 552.77"><g><path d="M17.95,528.854h71.861c9.914,0,17.95-8.037,17.95-17.951V196.8c0-9.915-8.036-17.95-17.95-17.95H17.95 C8.035,178.85,0,186.885,0,196.8v314.103C0,520.816,8.035,528.854,17.95,528.854z"></path> <path d="M17.95,123.629h71.861c9.914,0,17.95-8.036,17.95-17.95V41.866c0-9.914-8.036-17.95-17.95-17.95H17.95 C8.035,23.916,0,31.952,0,41.866v63.813C0,115.593,8.035,123.629,17.95,123.629z"></path> <path d="M525.732,215.282c-10.098-13.292-24.988-24.223-44.676-32.791c-19.688-8.562-41.42-12.846-65.197-12.846 c-48.268,0-89.168,18.421-122.699,55.27c-6.672,7.332-11.523,5.729-11.523-4.186V196.8c0-9.915-8.037-17.95-17.951-17.95h-64.192 c-9.915,0-17.95,8.035-17.95,17.95v314.103c0,9.914,8.036,17.951,17.95,17.951h71.861c9.915,0,17.95-8.037,17.95-17.951V401.666 c0-45.508,2.748-76.701,8.244-93.574c5.494-16.873,15.66-30.422,30.488-40.649c14.83-10.227,31.574-15.343,50.24-15.343 c14.572,0,27.037,3.58,37.393,10.741c10.355,7.16,17.834,17.19,22.436,30.104c4.604,12.912,6.904,41.354,6.904,85.33v132.627 c0,9.914,8.035,17.951,17.949,17.951h71.861c9.914,0,17.949-8.037,17.949-17.951V333.02c0-31.445-1.982-55.607-5.941-72.48 S535.836,228.581,525.732,215.282z"></path></g></svg>
+                </a>
             </div>
             <p>Copyright &copy; 2025 Landon Layton | All Rights Reserved</p>
         </footer>
