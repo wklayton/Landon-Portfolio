@@ -814,7 +814,7 @@ ul {
 
 #contact .contact_head {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   margin: 2rem 2rem 2rem;
 }
 
@@ -836,10 +836,10 @@ ul {
 #contact h2 {
   width: fit-content;
   display: block;
-  font-size: 3rem;
+  font-size: 2.25rem;
   color: var(--white);
   margin-left: 1rem;
-  padding-bottom: 0.6rem;
+  padding-top: 0.5rem;
 }
 
 #contact .contact_form {
