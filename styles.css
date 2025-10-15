@@ -193,7 +193,9 @@ ul {
   font-weight: 700;
   color: var(--white);
   padding: 0.25rem 0.25rem 0.25rem;
+  border-bottom: 0.25rem solid transparent;
   -webkit-tap-highlight-color: rgba(240, 166, 192, 0.3);
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 
 #navbar .nav_item:hover {
