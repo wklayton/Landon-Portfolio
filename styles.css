@@ -164,11 +164,11 @@ ul {
 
 #navbar .home_pic_link .home_img .h_circle{
   transform-origin: 50% 50%;
-  animation: spin 1s linear infinite;
+  animation: spin 2.5s linear infinite;
 }
 
 #navbar .home_pic_link:hover .home_img .h_circle{
-  animation: spin 1s linear infinite;
+  animation-duration: 0.5s;
 }
 
 @keyframes spin {
