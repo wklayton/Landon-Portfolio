@@ -166,8 +166,12 @@ ul {
   transform-origin: 50% 50%;
 }
 
+#navbar .home_pic_link svg {
+  shape-rendering: auto;
+}
+
 #navbar .home_pic_link:hover .home_img .h_circle{
-  animation: spin 0.3s linear infinite
+  animation: spin 0.4s linear infinite
 }
 
 #navbar .home_pic_link .home_img .h_crown{
@@ -175,7 +179,7 @@ ul {
 }
 
 #navbar .home_pic_link:hover .home_img .h_crown{
-  animation: shake 1s ease-in-out infinite;
+  animation: shake 1.2s ease-in-out infinite;
 }
 
 @keyframes spin {
@@ -190,13 +194,13 @@ ul {
 
 @keyframes shake {
   from {
-    transform: translate(17%, 26%);
+    transform: translate(17.3%, 26.5%);
   }
   50% {
-    transform: translate(17.5%, 29%);
+    transform: translate(18.2%, 29%);
   }
   to {
-    transform: translate(17%, 26%);
+    transform: translate(17.3%, 26.5%);
   }
 }
 
@@ -353,7 +357,7 @@ ul {
   #welcome .job_title {
       color: var(--white);
       font-size: 3.25rem;
-      margin: 0;
+      margin: 0 -0.15rem;
   }
 
   #welcome .name {
@@ -396,7 +400,8 @@ ul {
 /* Mobile */
 
 #portfolio {
-  background-color: var(--dk-gray);
+  background-color: var(--black);
+  padding-bottom: 2rem;
 }
 
 #portfolio h2 {
@@ -420,15 +425,39 @@ ul {
 #portfolio .card {
   width: 100%;
   height: 15rem;
-  background-color: rgba(21, 21, 21, 0.3);
+  /* box-shadow: 0 1rem 1rem var(--black) inset, 0 -1rem 1rem var(--black) inset; */
+  margin-bottom: 1rem;
 }
 
 #portfolio .card * {
   color: var(--white);
 }
 
+#portfolio .card h3 {
+  font-size: 1.5;
+}
+
+#portfolio .card.pre1 {
+  background: url(assets/boogie_foreground.png) top no-repeat, url(assets/boogie_background.png) left 75% no-repeat;
+  background-size: 70%, cover;
+  image-rendering: pixelated;
+  box-shadow: 0 0 0 0.3rem var(--pink) inset;
+}
+
 #portfolio .card.pre2 {
   text-align: right;
+  background: url(assets/clockwork_foreground.png) left center no-repeat, url(assets/clockwork_background.jpg) right top no-repeat;
+  background-size: 60%, cover;
+  box-shadow: 0 0 0 0.3rem var(--green) inset;
+  /* background-blend-mode: multiply;
+  background-color: rgba(21, 21, 21, 0.6); */
+}
+
+/* #portfolio .card.pre3 {
+  background: url(assets/work_exp.jpg) right center no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(21, 21, 21, 0.75);
 }
 
 #portfolio .card.pre1 .v_more {
@@ -453,17 +482,16 @@ ul {
 #portfolio .card.pre2 .v_more:hover {
   background-color: var(--lt-green);
   opacity: 1;
-}
+} */
 
-#portfolio .card.pre3 .v_more {
-  background-color: var(--blue);
+#portfolio .v_more {
+  background-color: var(--green);
   color: var(--black);
-  opacity: 0.9;
+  margin-top: 1rem;
 }
 
-#portfolio .card.pre3 .v_more:hover {
-  background-color: var(--lt-blue);
-  opacity: 1;
+#portfolio .v_more:hover {
+  background-color: var(--lt-green);
 }
 
 
@@ -480,7 +508,7 @@ ul {
   width: max-content;
   display: block;
   padding: 0.25rem 2rem;
-  border-radius: 2rem;
+  border-radius: 0.25rem;
 }
 
 /* #portfolio {
@@ -614,6 +642,7 @@ ul {
   z-index: 2;
   background-color: var(--white);
   padding: 2rem 0;
+  box-shadow: 0 1rem 1rem -0.5rem var(--black) inset, 0 -1rem 1rem -0.5rem var(--black) inset;
 }
 
 #qualifications h2 {
@@ -646,33 +675,33 @@ ul {
 
 #qualifications .quals_pink {
   background-color: rgb(165, 116, 133);
-  border-radius: 0 2rem 2rem 2rem;
+  border-radius: 0 0.25rem 0.25rem 0.25rem;
 }
 #qualifications .quals_blue {
   background-color: var(--blue);
-  border-radius: 2rem 2rem;
+  border-radius: 0.25rem 0.25rem;
 }
 #qualifications .quals_green {
   background-color: rgb(119, 130, 86);
-  border-radius: 2rem 0 2rem 2rem;
+  border-radius: 0.25rem 0 0.25rem 0.25rem;
 }
 
 #qualifications .quals_pink.active {
   background-color: var(--lt-pink);
-  border: 1rem solid var(--pink);
+  border: 0.25rem solid var(--pink);
   position: absolute;
   z-index: 15;
   
 }
 #qualifications .quals_blue.active {
   background-color: var(--lt-blue);
-  border: 1rem solid var(--blue);
+  border: 0.25rem solid var(--blue);
   position: absolute;
   z-index: 15;
 }
 #qualifications .quals_green.active {
   background-color: var(--lt-green);
-  border: 1rem solid var(--green);
+  border: 0.25rem solid var(--green);
   position: absolute;
   z-index: 15;
 }
@@ -698,30 +727,28 @@ ul {
 
 #qualifications .quals_btns {
   width: 100%;
-  height: 5rem;
-  max-height: 3.5rem;
-  padding: 1rem 0;
+  padding: 1rem 0 0.5rem;
   color: var(--white);
   font-size: 1.25rem;
   font-weight: 700;
   margin: 0 auto;
-  border-radius: 1.25rem 1.25rem 0 0;
+  border-radius: 0.25rem 0.25rem 0 0;
   position: relative;
   z-index: 1;
   cursor: pointer;
   box-shadow: 0 -2.5rem 2rem -2rem rgba(21, 21, 21, 0.5) inset;
-  transition: max-height 0.2s ease-out;
+  transition: padding 0.2s ease-out;
 }
 
 #qualifications .quals_btns:hover {
-  max-height: 4rem;
+  padding: 1rem 0 0.75rem;
 }
 
 #qualifications .quals_btns.btn_active {
   z-index: 3;
   cursor:auto;
   box-shadow: none;
-  max-height: 5rem;
+  padding: 1rem 0 1rem;
 }
 
 #qualifications .quals_btn_pink {
@@ -750,7 +777,7 @@ ul {
   }
 
   #qualifications .quals_green {
-    border-radius: 2rem 2rem 2rem 2rem;
+    border-radius: 0.25rem;
   }
 
   #qualifications .quals_btns {
