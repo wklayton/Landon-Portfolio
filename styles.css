@@ -162,13 +162,20 @@ ul {
   width: 0;
 }
 
-#navbar .home_pic_link .home_img .h_circle{
+#navbar .home_pic_link * {
   transform-origin: 50% 50%;
-  animation: spin 2.5s linear infinite;
 }
 
 #navbar .home_pic_link:hover .home_img .h_circle{
-  animation-duration: 0.5s;
+  animation: spin 0.3s linear infinite
+}
+
+#navbar .home_pic_link .home_img .h_crown{
+  position: absolute;
+}
+
+#navbar .home_pic_link:hover .home_img .h_crown{
+  animation: shake 1s ease-in-out infinite;
 }
 
 @keyframes spin {
@@ -178,6 +185,18 @@ ul {
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes shake {
+  from {
+    transform: translate(17%, 26%);
+  }
+  50% {
+    transform: translate(17.5%, 29%);
+  }
+  to {
+    transform: translate(17%, 26%);
   }
 }
 
