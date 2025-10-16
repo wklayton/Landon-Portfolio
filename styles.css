@@ -254,7 +254,7 @@ ul {
 /* Mobile */
 
 #welcome {
-  padding: 12rem 0 8rem;
+  padding: 6rem 0 8rem;
   background-color: var(--blue);
   display: flex;
   align-items: center;
@@ -264,6 +264,7 @@ ul {
 #welcome .w_left {
   margin: 0 2rem;
   text-align: center;
+  width: fit-content;
 }
 
 #welcome .job_title {
@@ -327,8 +328,9 @@ ul {
 }
 
 #welcome .portrait {
-  margin-top: 3rem;
-  width: fit-content;
+  width: 15rem;
+  height: auto;
+  filter: drop-shadow(0 0 1rem rgba(21, 21, 21, 0.15));
 }
 
 /* Tablet */
@@ -347,52 +349,62 @@ ul {
 
 @media only screen and (min-width:1200px) {
   #welcome {
-      padding: 11rem 6rem 8rem;
-      flex-direction: row;
+    padding: 11rem 8rem 8rem;
+    flex-direction: row-reverse;
   }
 
+  #welcome .w_right {
+    margin: 0;
+    width: fit-content;
+  }
   #welcome .w_left {
-      margin: 0 auto 0 2rem;
+      margin: 0 auto 0 0;
       text-align: left;
   }
 
   #welcome .job_title {
-      color: var(--white);
-      font-size: 3.25rem;
-      margin: 0 -0.15rem;
+    color: var(--white);
+    font-size: 2.75rem;
+    margin: 0 -0.15rem;
   }
 
   #welcome .name {
-      font-size: 2.25rem;
-      width: fit-content;
-      margin: 0;
+    font-size: 2.25rem;
+    width: fit-content;
+    margin: 0;
   }
 
   #welcome .job_title, #welcome .name {
-      line-height: 1;
+    line-height: 1;
   }
 
   #welcome .socials {
-      margin-top: 1rem;
-      width: fit-content;
-      display: inline-flex;
-      gap: 1rem;
-  }
-
-  #welcome .w_right {
-      width: fit-content;
-      margin: 0 2rem 0 auto;
+    margin-top: 1rem;
+    width: fit-content;
+    display: inline-flex;
+    gap: 1rem;
   }
 
   #welcome .portrait {
-      margin-top: 0;
-      width: fit-content;
+    width: 13rem;
   }
 }
 
 @media only screen and (min-width:1800px) {
   #welcome {
-      padding: 14rem 10rem 11em;
+      padding: 14rem 12rem 11em;
+  }
+
+  #welcome .job_title {
+    font-size: 3.5rem;
+  }
+
+  #welcome .name {
+    font-size: 2.5rem;
+  }
+
+  #welcome .portrait {
+    width: 15rem;
   }
 }
 
