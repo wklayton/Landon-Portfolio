@@ -346,6 +346,16 @@ ul {
   }
 }
 
+@media only screen and (min-width:800px) {
+  #welcome .job_title {
+      font-size: 3.5rem;
+  }
+
+  #welcome .name {
+      font-size: 2.5rem;
+  }
+}
+
 /* Desktop */
 
 @media only screen and (min-width:1200px) {
