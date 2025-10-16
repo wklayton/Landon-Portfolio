@@ -432,6 +432,31 @@ ul {
   transition: box-shadow 0.2s ease-in-out;
 }
 
+
+
+#portfolio .card h3 {
+  font-size: 1.5;
+}
+
+#portfolio .card.pre1 {
+  background: url(assets/boogie_foreground.png) top no-repeat, url(assets/boogie_background.png) left 75% no-repeat;
+  background-size: 70%, cover;
+  box-shadow: 0 0 0 0.3rem var(--pink) inset;
+  image-rendering: pixelated;
+}
+
+#portfolio .card.pre2 {
+  background: url(assets/clockwork_foreground.png) left center no-repeat, url(assets/clockwork_background.jpg) right top no-repeat;
+  background-size: 60%, cover;
+  box-shadow: 0 0 0 0.3rem var(--green) inset;
+}
+
+/* #portfolio .card.pre3 {
+  background: url(assets/) left center no-repeat, url(assets/) right top no-repeat;
+  background-size: 60%, cover;
+  box-shadow: 0 0 0 0.3rem var(--blue) inset;
+} */
+
 #portfolio .pre_a {
   display: block;
   width: 100%;
@@ -446,9 +471,11 @@ ul {
   box-shadow: 0 0 0 0.75rem var(--lt-green) inset; 
 }
 
-#portfolio .pre_a:focus-visible {
-  outline: none;
-}
+/* #portfolio .card.pre3:hover {
+  box-shadow: 0 0 0 0.75rem var(--lt-blue) inset; 
+} */
+
+
 
 #portfolio .card.pre1:focus-within {
   box-shadow: 0 0 0 1rem var(--lt-pink) inset;
@@ -458,22 +485,12 @@ ul {
   box-shadow: 0 0 0 1rem var(--lt-green) inset; 
 }
 
-#portfolio .card h3 {
-  font-size: 1.5;
-}
+/* #portfolio .card.pre3:focus-within {
+  box-shadow: 0 0 0 1rem var(--lt-blue) inset; 
+} */
 
-#portfolio .card.pre1 {
-  background: url(assets/boogie_foreground.png) top no-repeat, url(assets/boogie_background.png) left 75% no-repeat;
-  background-size: 70%, cover;
-  image-rendering: pixelated;
-  box-shadow: 0 0 0 0.3rem var(--pink) inset;
-}
-
-#portfolio .card.pre2 {
-  text-align: right;
-  background: url(assets/clockwork_foreground.png) left center no-repeat, url(assets/clockwork_background.jpg) right top no-repeat;
-  background-size: 60%, cover;
-  box-shadow: 0 0 0 0.3rem var(--green) inset;
+#portfolio .pre_a:focus-visible {
+  outline: none;
 }
 
 #portfolio .v_more {
@@ -555,19 +572,7 @@ ul {
 }
 #qualifications .quals_container {
   margin: 0;
-  height: 15rem
-}
-
-#qualifications .quals {
-  position: absolute;
-  z-index: 1;
-  width: 90%;
-  height: 15rem;
-}
-
-#qualifications .quals.active {
-  visibility: visible;
-  padding: 3rem 1rem;
+  height: 30rem
 }
 
 #qualifications .quals_pink {
@@ -612,8 +617,16 @@ ul {
   z-index: 15;
 }
 
+#qualifications .quals {
+  position: absolute;
+  z-index: 1;
+  width: 90%;
+  height: 30rem;
+  padding: 1rem;
+}
+
 #qualifications .quals h3 {
-  font-size: 1.3rem;
+  font-size: 1.75rem;
   text-align: center;
 }
 
@@ -622,13 +635,37 @@ ul {
   text-align: center;
 }
 
+#qualifications .qual_sub {
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+#qualifications .quals_img {
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+}
+
+#qualifications .quals_pink .quals_img {
+  border: 0.35rem solid var(--pink);
+}
+
+#qualifications .quals_blue .quals_img {
+  border: 0.35rem solid var(--blue);
+}
+
+#qualifications .quals_green .quals_img {
+  border: 0.35rem solid var(--green);
+}
+
 #qualifications .quals_btns_container {
   width: 100%;
-  height: 5rem;
+  height: 3.75rem;
   display: flex;
   align-items: flex-end;
-  gap: 0.5%;
-  grid-template-columns: 32.5% 32.5% 32.5%;
+  gap: 0.175rem;
 }
 
 #qualifications .quals_btns {
@@ -701,7 +738,28 @@ ul {
 
   #qualifications .quals_container {
     width: 75%;
-    margin: 0 auto 10rem;
+    margin: 0 auto 5rem;
+    height: 20rem;
+  }
+
+  #qualifications .quals_inside {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  #qualifications .quals_content {
+  margin-left: 1rem;
+  }
+
+  #qualifications .quals h3, #qualifications .quals p {
+    text-align: left;
+  }
+
+  #qualifications .quals_img {
+    width: 45%;
+    max-width: 20rem;
+    margin-left: auto;
   }
 }
 
