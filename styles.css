@@ -3,7 +3,7 @@
 :root {
   --orange: rgb(246, 223, 188);
   --green: rgb(168, 184, 118);
-  --lt-green: rgb(187, 207, 136);
+  --lt-green: rgb(202, 223, 145);
   --pink: rgb(240, 166, 192);
   --lt-pink: rgb(247, 197, 214);
   --blue: rgb(166, 207, 201);
@@ -217,6 +217,7 @@ ul {
   color: var(--white);
   padding: 0.25rem 0.25rem 0.25rem;
   border-bottom: 0.25rem solid transparent;
+  border-radius: 0.25rem;
   -webkit-tap-highlight-color: rgba(240, 166, 192, 0.3);
   transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
@@ -294,6 +295,7 @@ ul {
 #welcome .socials svg {
   width: 2rem;
   height: auto;
+  transition: opacity 0.2s ease-in-out, fill 0.2s ease-in-out, stroke 0.2s ease-in-out;
 }
 
 #welcome .socials .e_svg {
@@ -423,14 +425,37 @@ ul {
 }
 
 #portfolio .card {
+  display: flex;
   width: 100%;
   height: 15rem;
-  /* box-shadow: 0 1rem 1rem var(--black) inset, 0 -1rem 1rem var(--black) inset; */
   margin-bottom: 1rem;
+  transition: box-shadow 0.2s ease-in-out;
 }
 
-#portfolio .card * {
-  color: var(--white);
+#portfolio .pre_a {
+  display: block;
+  width: 100%;
+  align-items: stretch;
+}
+
+#portfolio .card.pre1:hover {
+  box-shadow: 0 0 0 0.75rem var(--lt-pink) inset;
+}
+
+#portfolio .card.pre2:hover {
+  box-shadow: 0 0 0 0.75rem var(--lt-green) inset; 
+}
+
+#portfolio .pre_a:focus-visible {
+  outline: none;
+}
+
+#portfolio .card.pre1:focus-within {
+  box-shadow: 0 0 0 1rem var(--lt-pink) inset;
+}
+
+#portfolio .card.pre2:focus-within {
+  box-shadow: 0 0 0 1rem var(--lt-green) inset; 
 }
 
 #portfolio .card h3 {
@@ -449,60 +474,22 @@ ul {
   background: url(assets/clockwork_foreground.png) left center no-repeat, url(assets/clockwork_background.jpg) right top no-repeat;
   background-size: 60%, cover;
   box-shadow: 0 0 0 0.3rem var(--green) inset;
-  /* background-blend-mode: multiply;
-  background-color: rgba(21, 21, 21, 0.6); */
 }
-
-/* #portfolio .card.pre3 {
-  background: url(assets/work_exp.jpg) right center no-repeat;
-  background-size: cover;
-  background-blend-mode: multiply;
-  background-color: rgba(21, 21, 21, 0.75);
-}
-
-#portfolio .card.pre1 .v_more {
-  background-color: var(--pink);
-  color: var(--black);
-  opacity: 0.9;
-}
-
-#portfolio .card.pre1 .v_more:hover {
-  background-color: var(--lt-pink);
-  color: var(--black);
-  opacity: 1;
-}
-
-#portfolio .card.pre2 .v_more {
-  margin-left: auto;
-  background-color: var(--green);
-  color: var(--black);
-  opacity: 0.9;
-}
-
-#portfolio .card.pre2 .v_more:hover {
-  background-color: var(--lt-green);
-  opacity: 1;
-} */
 
 #portfolio .v_more {
-  background-color: var(--green);
+  background-color: var(--white);
+  opacity: 1;
   color: var(--black);
-  margin-top: 1rem;
+  margin: 1rem auto;
+  transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 
 #portfolio .v_more:hover {
-  background-color: var(--lt-green);
-}
-
-
-
-
-#portfolio .card * {
-  margin: 2rem;
+  background-color: var(--lt-gray);
+  opacity: 0.85;
 }
 
 #portfolio .v_more {
-  color: var(--white);
   font-size: 1.25rem;
   font-weight: 700;
   width: max-content;
@@ -511,122 +498,33 @@ ul {
   border-radius: 0.25rem;
 }
 
-/* #portfolio {
-  background-color: var(--white);
-  margin-top: 2rem;
-}
-
-#portfolio h2 {
-  width: fit-content;
-  margin: 0 auto;
-  font-size: 2rem;
-}
-
-#portfolio .carousel {
-  margin: 1rem auto;
-  padding: 2rem;
-  background-color: var(--gray);
-  box-shadow: 0 0 1rem -0.75rem var(--black) inset;
-  display: flex;
-  width: 100%;
-  height: fit-content;
-  overflow: hidden;
-}
-
-#portfolio .carousel::-webkit-scrollbar {
-  display: none;
-}
-
-#portfolio .car_btn {
-  border: 0.25rem solid var(--black);
-  position: absolute;
-  border-radius: 50%;
-  height: 3rem;
-  width: 3rem;
-}
-
-#portfolio .c_left {
-  top: 50%;
-  left: 25%;
-  transform: translate(-50%, 50%);
-}
-
-#portfolio .c_right {
-  top: 50%;
-  right: 25%;
-  transform: translate(50%,50%);
-}
-
-#portfolio .cards_container {
-  display: flex;
-  flex-direction: column;
-  width: 15rem;
-  height: 15rem;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  gap: 5rem;
-}
-
-#portfolio .card {
-  width: 15rem;
-  height: 15rem;
-  position: absolute;
-  border-radius: 50%;
-  background-color: var(--white);
-  border: 1px solid black;
-  text-align: center;
-  align-content: center;
-}
-
-#portfolio .card.active {
-  visibility: visible;
-}
-
-#portfolio .v_more {
-  color: var(--white);
-  font-size: 1.5rem;
-  font-weight: 700;
-  width: max-content;
-  display: block;
-  padding: 0.5rem 3rem;
-  margin: 3rem auto;
-  background-color: var(--green);
-  border-radius: 2rem;
-}
-
-#portfolio .v_more:hover {
-  color: var(--green);
-  background-color: var(--black);
-} */
-
 /* Desktop */
 
 @media only screen and (min-width:1200px) {
 
   #portfolio .cards_container {
       animation: none;
-      width: fit-content;
       flex-direction: row;
       padding: 0;
-      margin: 0 auto;
-      gap: 0.5rem;
+      margin: 0 8rem;
+      gap: 1rem;
+  }
+
+  #portfolio .card {
+    border-radius: 0.25rem;
+    height: 12rem;
   }
 }
 
 @media only screen and (min-width:1800px) {
 
-  #portfolio {
-      margin-top: 3rem;
-  }
-
-  #portfolio .carousel {
-      margin-top: 2rem;
-  }
-
   #portfolio .cards_container {
-      gap: 8rem;
+      gap: 2rem;
+      margin: 0 12rem;
+  }
+
+  #portfolio .card {
+    height: 20rem;
   }
 }
 
@@ -641,8 +539,8 @@ ul {
   position: relative;
   z-index: 2;
   background-color: var(--white);
-  padding: 2rem 0;
-  box-shadow: 0 1rem 1rem -0.5rem var(--black) inset, 0 -1rem 1rem -0.5rem var(--black) inset;
+  padding: 2rem 0 3rem;
+  box-shadow: 0 1rem 1.25rem -0.85rem var(--black) inset, 0 -1rem 1.25rem -0.85rem var(--black) inset;
 }
 
 #qualifications h2 {
@@ -665,7 +563,6 @@ ul {
   z-index: 1;
   width: 90%;
   height: 15rem;
-
 }
 
 #qualifications .quals.active {
@@ -688,20 +585,29 @@ ul {
 
 #qualifications .quals_pink.active {
   background-color: var(--lt-pink);
-  border: 0.25rem solid var(--pink);
+  border-top: 1rem solid var(--pink);
+  border-left: 0.5rem solid var(--pink);
+  border-right: 0.5rem solid var(--pink);
+  border-bottom: 0.5rem solid var(--pink);
   position: absolute;
   z-index: 15;
   
 }
 #qualifications .quals_blue.active {
   background-color: var(--lt-blue);
-  border: 0.25rem solid var(--blue);
+  border-top: 1rem solid var(--blue);
+  border-left: 0.5rem solid var(--blue);
+  border-right: 0.5rem solid var(--blue);
+  border-bottom: 0.5rem solid var(--blue);
   position: absolute;
   z-index: 15;
 }
 #qualifications .quals_green.active {
   background-color: var(--lt-green);
-  border: 0.25rem solid var(--green);
+  border-top: 1rem solid var(--green);
+  border-left: 0.5rem solid var(--green);
+  border-right: 0.5rem solid var(--green);
+  border-bottom: 0.5rem solid var(--green);
   position: absolute;
   z-index: 15;
 }
@@ -721,13 +627,13 @@ ul {
   height: 5rem;
   display: flex;
   align-items: flex-end;
-  gap: 1.25%;
+  gap: 0.5%;
   grid-template-columns: 32.5% 32.5% 32.5%;
 }
 
 #qualifications .quals_btns {
   width: 100%;
-  padding: 1rem 0 0.5rem;
+  padding: 0.75rem 0 0.5rem;
   color: var(--white);
   font-size: 1.25rem;
   font-weight: 700;
@@ -736,19 +642,19 @@ ul {
   position: relative;
   z-index: 1;
   cursor: pointer;
-  box-shadow: 0 -2.5rem 2rem -2rem rgba(21, 21, 21, 0.5) inset;
+  box-shadow: 0 -0.8rem 0.8rem -0.8rem rgba(21, 21, 21, 0.5) inset;
   transition: padding 0.2s ease-out;
 }
 
 #qualifications .quals_btns:hover {
-  padding: 1rem 0 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 #qualifications .quals_btns.btn_active {
   z-index: 3;
   cursor:auto;
   box-shadow: none;
-  padding: 1rem 0 1rem;
+  padding-bottom: 0.75rem;
 }
 
 #qualifications .quals_btn_pink {
@@ -774,6 +680,10 @@ ul {
   #qualifications .quals_btns_container {
     width: 50%;
     margin-left: 12.5%;
+  }
+
+  #qualifications .quals_btns.btn_active {
+    padding: 1rem 0 1rem;
   }
 
   #qualifications .quals_green {
@@ -911,14 +821,13 @@ ul {
   font-weight: 700;
   font-size: 1.5rem;
   border-radius: 0.25rem;
-  opacity: 0.9;
+  transition: background-color 0.2s ease-in-out;
 }
 
 #contact .submit_btn:hover {
   background-color: var(--lt-green);
   color: var(--black);
   cursor: pointer;
-  opacity: 1;
 }
 
 
@@ -944,6 +853,7 @@ ul {
   width: 2rem;
   height: auto;
   opacity: 0.8;
+  transition: opacity 0.2s ease-in-out, fill 0.2s ease-in-out, stroke 0.2s ease-in-out;
 }
 
 #foot .s_links .e_svg {
