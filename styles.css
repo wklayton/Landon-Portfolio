@@ -567,12 +567,13 @@ ul {
 }
 
 #qualifications .quals_folder {
-  width: 90%;
-  margin: 0 auto;
+  margin: 0 2rem;
 }
+
 #qualifications .quals_container {
   margin: 0;
-  height: 30rem
+  height: 30rem;
+  position: relative;
 }
 
 #qualifications .quals_pink {
@@ -594,7 +595,6 @@ ul {
   border-left: 0.5rem solid var(--pink);
   border-right: 0.5rem solid var(--pink);
   border-bottom: 0.5rem solid var(--pink);
-  position: absolute;
   z-index: 15;
   
 }
@@ -604,7 +604,6 @@ ul {
   border-left: 0.5rem solid var(--blue);
   border-right: 0.5rem solid var(--blue);
   border-bottom: 0.5rem solid var(--blue);
-  position: absolute;
   z-index: 15;
 }
 #qualifications .quals_green.active {
@@ -613,14 +612,13 @@ ul {
   border-left: 0.5rem solid var(--green);
   border-right: 0.5rem solid var(--green);
   border-bottom: 0.5rem solid var(--green);
-  position: absolute;
   z-index: 15;
 }
 
 #qualifications .quals {
   position: absolute;
   z-index: 1;
-  width: 90%;
+  width: 100%;
   height: 30rem;
   padding: 1rem;
 }
@@ -642,8 +640,9 @@ ul {
 
 #qualifications .quals_img {
   display: block;
-  margin-top: 1rem;
+  margin: 1rem auto;
   width: 100%;
+  max-width: 20rem;
   height: auto;
   border-radius: 0.25rem;
 }
@@ -711,12 +710,12 @@ ul {
 /* Desktop */
 @media only screen and (min-width:1200px) {
   #qualifications .quals_folder{
-    width: 100%;
+    margin: 0 8rem;
   }
 
   #qualifications .quals_btns_container {
     width: 50%;
-    margin-left: 12.5%;
+    margin: 0;
   }
 
   #qualifications .quals_btns.btn_active {
@@ -732,13 +731,11 @@ ul {
   }
 
   #qualifications .quals {
-    width: 75%;
     height: 20rem;
   }
 
   #qualifications .quals_container {
-    width: 75%;
-    margin: 0 auto 5rem;
+    margin: 0 0 5rem;
     height: 20rem;
   }
 
@@ -760,12 +757,17 @@ ul {
     width: 45%;
     max-width: 20rem;
     margin-left: auto;
+    margin-right: 0;
   }
 }
 
 @media only screen and (min-width:1800px) {
   #qualifications .quals_btns {
     font-size: 1.2rem;
+  }
+
+  #qualifications .quals_folder{
+    margin: 0 12rem;
   }
 }
 
@@ -860,17 +862,6 @@ ul {
   resize: none;
 }
 
-/* #contact .name_inputs {
-  display: flex;
-  width: 100%;
-  margin: 0 auto;
-  gap: 1rem;
-}
-
-#contact .name_inputs .contact_inputs {
-  margin: 0;
-} */
-
 #contact .submit_btn {
   display: block;
   padding: 0.5rem 5rem;
@@ -888,6 +879,29 @@ ul {
   cursor: pointer;
 }
 
+@media only screen and (min-width: 1200px) {
+
+  #contact .contact_head {
+    margin: 0 8rem;
+  }
+
+  #contact .contact_form {
+    width: auto;
+    margin: 0 8rem;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+
+  #contact .contact_head {
+    margin: 0 12rem;
+  }
+
+  #contact .contact_form {
+    margin: 0 12rem;
+  }
+}
 
 /* FOOTER */
 
