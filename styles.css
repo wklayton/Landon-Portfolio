@@ -456,6 +456,7 @@ ul {
 }
 
 #portfolio .card {
+  position: relative;
   display: flex;
   width: 100%;
   height: 15rem;
@@ -483,7 +484,7 @@ ul {
 }
 
 /* #portfolio .card.pre3 {
-  background: url(assets/) left center no-repeat, url(assets/) right top no-repeat;
+  background: url(assets/) center no-repeat, url(assets/) center no-repeat;
   background-size: 60%, cover;
   box-shadow: 0 0 0 0.3rem var(--blue) inset;
 } */
@@ -525,6 +526,48 @@ ul {
 }
 
 #portfolio .v_more {
+  position: absolute;
+  display: block;
+  padding: 0.25rem 0.5rem 0.25rem 0.6rem;
+  border-radius: 0.25rem 0 0 0;
+  font-weight: 700;
+  bottom: 0;
+  right: 0;
+  transition: background-color 0.2s ease-in-out, padding 0.2s ease-in-out;
+}
+
+#portfolio .pre_a:hover .v_more {
+  padding-right: 1rem;
+  padding-bottom: 0.75rem;
+}
+
+#portfolio .card.pre1 .v_more {
+    background-color: var(--pink);
+}
+
+#portfolio .card.pre1 .pre_a:hover .v_more {
+    background-color: var(--lt-pink);
+}
+
+#portfolio .card.pre2 .v_more {
+    background-color: var(--green);
+}
+
+#portfolio .card.pre2 .pre_a:hover .v_more {
+    background-color: var(--lt-green);
+}
+
+#portfolio .card.pre3 .v_more {
+    background-color: var(--blue);
+}
+
+#portfolio .card.pre3 .pre_a:hover .v_more {
+    background-color: var(--lt-blue);
+    padding-right: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+/* #portfolio .v_more {
   background-color: var(--white);
   opacity: 1;
   color: var(--black);
@@ -544,7 +587,7 @@ ul {
   display: block;
   padding: 0.25rem 2rem;
   border-radius: 0.25rem;
-}
+} */
 
 /* Desktop */
 
@@ -553,6 +596,7 @@ ul {
   #portfolio .cards_container {
       animation: none;
       flex-direction: row;
+      flex-wrap: wrap;
       padding: 0;
       margin: 0 8rem;
       gap: 1rem;
@@ -561,6 +605,12 @@ ul {
   #portfolio .card {
     border-radius: 0.25rem;
     height: 12rem;
+    flex: 1 1 25%;
+  }
+
+  #portfolio .v_more {
+    padding-left: 0.75rem;
+    padding-top: 0.35rem;
   }
 }
 
@@ -834,13 +884,30 @@ ul {
   animation: spin 1s linear infinite;
 }
 
-#contact h2 {
+#contact .contact_title {
   width: fit-content;
   display: block;
-  font-size: 2.25rem;
-  color: var(--white);
   margin-left: 1rem;
   padding-top: 0.5rem;
+}
+
+#contact .contact_title h2 {
+  font-size: 2.25rem;
+  color: var(--white);
+  line-height: 2.2rem;
+}
+
+#contact .contact_title a {
+  font-size: 0.9rem;
+  margin-left: 0.2rem;
+  color: var(--green);
+  opacity: 0.75;
+  transition: opacity 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#contact .contact_title a:hover {
+  color: var(--lt-green);
+  opacity: 1;
 }
 
 #contact .contact_form {
