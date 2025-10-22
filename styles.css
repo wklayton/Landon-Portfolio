@@ -124,16 +124,23 @@ ul {
 
 /* Custom Styles */
 
+.no_transition *,
+.no_transition *::before {
+  transition: none !important;
+}
+
 /* NAVBAR */
 
 /* Mobile */
 
 #navbar {
-  padding: 0 2rem;
+  padding: 0 2rem 1.25rem;
   width: 100%;
-  height: 4rem;
+  height: 6rem;
   display: flex;
   align-items: center;
+  background: url(assets/nav_gradient_m.webp) bottom center no-repeat;
+  background-size: contain;
   background-color: var(--black);
   color: var(--white);
   z-index: 100;
@@ -211,23 +218,50 @@ ul {
   gap: 2rem;
 }
 
-#navbar .nav_item {
+
+
+
+#navbar .menu_content {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--white);
-  padding: 0.25rem 0.25rem 0.25rem;
-  border-bottom: 0.25rem solid transparent;
-  border-radius: 0.25rem;
+  padding: 0.25rem 0.25rem;
   -webkit-tap-highlight-color: rgba(240, 166, 192, 0.3);
-  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
-#navbar .nav_item:hover {
+#navbar .menu_content:hover {
   color: var(--pink);
-  border-bottom: 0.25rem solid var(--pink);
 }
 
+#navbar .menu_item {
+  display: flex;
+  flex-direction: column;
+}
+
+#navbar .rectangle {
+  display: block;
+  align-items: stretch;
+  padding: 0;
+  margin-top: 0.1rem;
+  height: 0.2rem;
+  background-color: transparent;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#navbar .menu_content:hover .rectangle {
+  background-color: var(--pink);
+}
 /* Desktop */
+
+@media only screen and (min-width: 800px) {
+  #navbar {
+  background: url(assets/nav_gradient.webp) bottom center no-repeat;
+  background-size: contain;
+  background-color: var(--black);
+  }
+}
 
 @media only screen and (min-width: 1200px){
   #navbar {
@@ -248,17 +282,28 @@ ul {
   }
 }
 
+@media only screen and (min-width:2300px){
+  #navbar {
+  background: url(assets/nav_gradient_lg.webp) bottom center no-repeat;
+  background-size: contain;
+  background-color: var(--black);
+  }
+}
+
 
 /* WELCOME */
 
 /* Mobile */
 
 #welcome {
-  padding: 6rem 0 4rem;
+  padding: 8rem 0 8rem;
+  background: url(assets/welcome_curve_m.webp) bottom center no-repeat;
+  background-size: 100%;
   background-color: var(--blue);
   display: flex;
   align-items: center;
   flex-direction: column;
+  box-shadow: inset 0 -.3rem 0 var(--black);
 }
 
 #welcome .w_left {
@@ -337,6 +382,7 @@ ul {
 /* Tablet */
 
 @media only screen and (min-width:410px) {
+
   #welcome .job_title {
       font-size: 2.75rem;
   }
@@ -347,6 +393,12 @@ ul {
 }
 
 @media only screen and (min-width:800px) {
+  #welcome {
+    background: url(assets/welcome_curve.webp) bottom center no-repeat;
+    background-size: 100%;
+    background-color: var(--blue);
+  }
+
   #welcome .job_title {
       font-size: 3.5rem;
   }
@@ -360,6 +412,10 @@ ul {
 
 @media only screen and (min-width:1200px) {
   #welcome {
+    padding: 6rem 8rem;
+  }
+
+  /* #welcome {
     padding: 11rem 8rem 8rem;
     flex-direction: row-reverse;
     flex-wrap: nowrap;
@@ -400,18 +456,18 @@ ul {
   #welcome .portrait {
     width: 13rem;
     margin: 0 0 0 auto;
-  }
+  } */
 }
 
-@media only screen and (min-width:1400px) {
+/* @media only screen and (min-width:1400px) {
   #welcome .portrait {
     width: 16rem;
   }
-}
+} */
 
 @media only screen and (min-width:1800px) {
   #welcome {
-      padding: 14rem 12rem 11em;
+      padding: 6rem 12rem;
   }
 
   #welcome .job_title {
@@ -423,7 +479,25 @@ ul {
   }
 
   #welcome .portrait {
-    width: 18rem;
+    width: 16rem;
+  }
+}
+
+  @media only screen and (min-width:2300px) {
+  #welcome {
+      padding: 8rem 12rem 10rem;
+  }
+
+  #welcome .job_title {
+    font-size: 3.5rem;
+  }
+
+  #welcome .name {
+    font-size: 2.5rem;
+  }
+
+  #welcome .portrait {
+    width: 16rem;
   }
 }
 
@@ -515,6 +589,18 @@ ul {
 
 #portfolio .card.pre2:focus-within {
   box-shadow: 0 0 0 1rem var(--lt-green) inset; 
+}
+
+#portfolio .card.pre1:focus-within .v_more {
+    background-color: var(--lt-pink);
+    padding-right: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+#portfolio .card.pre2:focus-within .v_more {
+    background-color: var(--lt-green);
+    padding-right: 1.25rem;
+    padding-bottom: 1.25rem; 
 }
 
 /* #portfolio .card.pre3:focus-within {

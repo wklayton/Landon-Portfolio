@@ -247,7 +247,14 @@ ul {
   }
 }
 
-/*  */
+
+/* P_WELCOME */
+
+/* Mobile */
+
+#p_welcome {
+  background-color: var(--blue);
+}
 
 /* CONTACT */
 
@@ -435,9 +442,33 @@ ul {
 /* p-styles */
 
 #p_welcome {
-  padding: 5rem 0;
+  position: relative;
+  display: flex;
+  padding: 3rem 0 10rem;
+  align-items: center;
+  align-content: center;
 }
 
 .portfolio_sec {
   margin: 2rem 0;
+}
+
+
+
+/* iframe */
+
+.iframe_test {
+  position: relative;
+  align-items: stretch;
+  align-self: stretch;
+  top: 0;
+  left: 0;
+}
+
+iframe {
+  position: absolute;
+  width: 100%;
+  border: none;
+  align-items: stretch;
+  align-self: stretch;
 }

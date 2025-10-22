@@ -1,3 +1,11 @@
+// Disable CSS Transitions on Page Load
+setTimeout(() => {
+  const toggleLabel = document.querySelector('.no_transition');
+  toggleLabel.classList.remove('no_transition');
+}, 500);
+
+
+// Qualifications Button CSS Class Toggle
 const pinkText = document.querySelector(".quals_pink");
 const blueText = document.querySelector(".quals_blue");
 const greenText = document.querySelector(".quals_green");
