@@ -134,7 +134,7 @@ ul {
 /* Mobile */
 
 #navbar {
-  padding: 0 2rem 1.25rem;
+  padding: 0 2rem 1rem;
   width: 100%;
   height: 6rem;
   display: flex;
@@ -222,6 +222,7 @@ ul {
 
 
 #navbar .menu_content {
+  position: relative;
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--white);
@@ -239,7 +240,7 @@ ul {
   flex-direction: column;
 }
 
-#navbar .rectangle {
+/* #navbar .rectangle {
   display: block;
   align-items: stretch;
   padding: 0;
@@ -251,6 +252,23 @@ ul {
 }
 
 #navbar .menu_content:hover .rectangle {
+  background-color: var(--pink);
+} */
+
+#navbar .menu_content::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  height: 0.2rem;
+  background-color: transparent;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#navbar .menu_content:hover::after {
   background-color: var(--pink);
 }
 /* Desktop */
@@ -265,7 +283,7 @@ ul {
 
 @media only screen and (min-width: 1200px){
   #navbar {
-      padding: 0 8rem;
+      padding: 0 8rem 1rem;
   }
 
   #navbar .sig_img {
@@ -278,7 +296,7 @@ ul {
 
 @media only screen and (min-width: 1800px){
   #navbar {
-      padding: 0 12rem;
+      padding: 0 12rem 1rem;
   }
 }
 
@@ -296,6 +314,7 @@ ul {
 /* Mobile */
 
 #welcome {
+  position: relative;
   padding: 8rem 0 8rem;
   background: url(assets/welcome_curve_m.webp) bottom center no-repeat;
   background-size: 100%;
@@ -304,6 +323,28 @@ ul {
   align-items: center;
   flex-direction: column;
   box-shadow: inset 0 -.3rem 0 var(--black);
+}
+
+#welcome .iframe_container {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+#welcome iframe {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  align-items: stretch;
+  top: 0;
+  left: 0;
+  border: none;
 }
 
 #welcome .w_left {

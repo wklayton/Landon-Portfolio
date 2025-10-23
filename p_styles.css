@@ -443,32 +443,33 @@ ul {
 
 #p_welcome {
   position: relative;
-  display: flex;
-  padding: 3rem 0 10rem;
-  align-items: center;
-  align-content: center;
+  padding: 10rem 0;
 }
 
 .portfolio_sec {
   margin: 2rem 0;
 }
 
-
+h1 {
+  position: relative;
+  z-index: 1;
+}
 
 /* iframe */
 
 .iframe_test {
-  position: relative;
+  position: absolute;
+  display: flex;
   align-items: stretch;
-  align-self: stretch;
-  top: 0;
-  left: 0;
+  align-content: stretch;
 }
 
 iframe {
   position: absolute;
+  display: block;
   width: 100%;
-  border: none;
+  height: 100%;
   align-items: stretch;
-  align-self: stretch;
+  top: 0;
+  left: 0;
 }
