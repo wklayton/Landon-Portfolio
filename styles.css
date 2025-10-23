@@ -345,12 +345,15 @@ ul {
   top: 0;
   left: 0;
   border: none;
+  user-select: none;
 }
 
 #welcome .w_left {
+  position: relative;
   margin: 0 2rem;
   text-align: center;
   width: fit-content;
+  z-index: 1;
 }
 
 #welcome .job_title {
@@ -409,8 +412,10 @@ ul {
 }
 
 #welcome .w_right {
+  position: relative;
   width: fit-content;
   margin: 0 2rem;
+  z-index: 1;
 }
 
 #welcome .portrait {
