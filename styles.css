@@ -223,6 +223,11 @@ ul {
 
 #navbar .menu_content {
   position: relative;
+  display: flex;
+  gap: 0.25rem;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
   font-size: 1.1rem;
   font-weight: 700;
   color: transparent;
@@ -231,11 +236,10 @@ ul {
   padding: 0.25rem 0.25rem;
   -webkit-tap-highlight-color: rgba(240, 166, 192, 0.3);
   transition: opacity 0.2s ease-in-out;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 #navbar .menu_content:hover {
-  /* color: var(--pink); */
   color: var(--white);
   background-clip: text;
   opacity: 1;
@@ -244,6 +248,77 @@ ul {
 #navbar .menu_item {
   display: flex;
   flex-direction: column;
+}
+
+#navbar .menu_btn {
+    position: relative;
+}
+
+#navbar .menu_btn svg {
+  stroke: var(--white);
+  stroke-width: 8;
+  width: 0.75rem;
+  height: auto;
+  fill: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+#navbar .menu_btn.active svg {
+  transform: rotate(-180deg);
+}
+
+#navbar .drop_btn {
+  position: relative;
+}
+
+#navbar .dropdown {
+  width: 15rem;
+  height: 7rem;
+  max-height: 0;
+  position: absolute;
+  top: 125%;
+  left: -15%;
+  background-color: var(--black);
+  transition: max-height 0.2s ease-in-out;
+  overflow: hidden;
+  border-radius: 0.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#navbar .active .dropdown {
+  max-height: 7rem;
+}
+
+#navbar .port_link a {
+  display: block;
+  width: fit-content;
+  position: relative;
+  color: var(--white);
+  font-weight: 700;
+  text-align: left;
+  margin-left: 1rem;
+  padding: 0.25rem 0;
+}
+
+#navbar .port_link a::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  opacity: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  height: 0.25rem;
+  border-radius: 0.25rem;
+  background: linear-gradient(to right, var(--pink), var(--green), var(--blue));
+  transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+#navbar .port_link a:hover::after {
+  width: 100%;
+  opacity: 1;
 }
 
 /* #navbar .rectangle {
@@ -586,6 +661,7 @@ ul {
 
 #portfolio .card {
   position: relative;
+  overflow: hidden;
   display: flex;
   width: 100%;
   height: 15rem;
@@ -612,16 +688,22 @@ ul {
   box-shadow: 0 0 0 0.3rem var(--green) inset;
 }
 
-/* #portfolio .card.pre3 {
-  background: url(assets/) center no-repeat, url(assets/) center no-repeat;
+#portfolio .card.pre3 {
+  background: url(assets/) center no-repeat, url(https://crypticnerds.com/assets/pharaohs_2.jpg) top center no-repeat;
   background-size: 60%, cover;
   box-shadow: 0 0 0 0.3rem var(--blue) inset;
-} */
+}
 
 #portfolio .pre_a {
   display: block;
   width: 100%;
   align-items: stretch;
+  background-color: transparent;
+  transition: background-color 0.15s ease-in-out;
+}
+
+#portfolio .pre_a:hover {
+  background-color: rgba(241, 241, 241, 0.03);
 }
 
 #portfolio .card.pre1:hover {
@@ -632,9 +714,9 @@ ul {
   box-shadow: 0 0 0 0.75rem var(--lt-green) inset; 
 }
 
-/* #portfolio .card.pre3:hover {
+#portfolio .card.pre3:hover {
   box-shadow: 0 0 0 0.75rem var(--lt-blue) inset; 
-} */
+}
 
 
 
@@ -644,6 +726,10 @@ ul {
 
 #portfolio .card.pre2:focus-within {
   box-shadow: 0 0 0 1rem var(--lt-green) inset; 
+}
+
+#portfolio .card.pre3:focus-within {
+  box-shadow: 0 0 0 1rem var(--lt-blue) inset; 
 }
 
 #portfolio .card.pre1:focus-within .v_more {
@@ -658,9 +744,11 @@ ul {
     padding-bottom: 1.25rem; 
 }
 
-/* #portfolio .card.pre3:focus-within {
-  box-shadow: 0 0 0 1rem var(--lt-blue) inset; 
-} */
+#portfolio .card.pre3:focus-within .v_more {
+    background-color: var(--lt-blue);
+    padding-right: 1.25rem;
+    padding-bottom: 1.25rem; 
+}
 
 #portfolio .pre_a:focus-visible {
   outline: none;
@@ -704,8 +792,6 @@ ul {
 
 #portfolio .card.pre3 .pre_a:hover .v_more {
     background-color: var(--lt-blue);
-    padding-right: 1.25rem;
-    padding-bottom: 1.25rem;
 }
 
 /* #portfolio .v_more {
@@ -736,8 +822,6 @@ ul {
 
   #portfolio .cards_container {
       animation: none;
-      flex-direction: row;
-      flex-wrap: wrap;
       padding: 0;
       margin: 0 8rem;
       gap: 1rem;
@@ -746,7 +830,6 @@ ul {
   #portfolio .card {
     border-radius: 0.25rem;
     height: 12rem;
-    flex: 1 1 25%;
   }
 
   #portfolio .v_more {
@@ -764,6 +847,29 @@ ul {
 
   #portfolio .card {
     height: 20rem;
+  }
+  #portfolio .card.pre2 {
+    background-size: 50%, cover;
+  }
+}
+
+@media only screen and (min-width:2300px) {
+    #portfolio .card {
+    height: 22rem;
+  }
+    #portfolio .card.pre1 {
+    background: url(assets/boogie_foreground.png) top no-repeat, url(assets/boogie_background.png) left 75% no-repeat;
+    background-size: 55%, cover;
+    box-shadow: 0 0 0 0.5rem var(--pink) inset;
+    image-rendering: pixelated;
+  }
+
+  #portfolio .card.pre2 {
+    box-shadow: 0 0 0 0.5rem var(--green) inset;
+  }
+
+  #portfolio .card.pre3 {
+    box-shadow: 0 0 0 0.5rem var(--blue) inset;
   }
 }
 
@@ -1005,9 +1111,10 @@ Desktop
 
 #timeline .timeline_container {
   margin: 2rem 2rem 0;
-  padding: 1rem 0;
+  padding: 3rem 0;
   background: url(assets/timeline_bar.webp) center no-repeat;
   background-size: contain;
+  /* box-shadow: inset 0 -0.5rem 1.5rem 2rem var(--black), inset 0 0.5rem 1.5rem 2rem var(--black); */
 }
 
 #timeline h2 {
@@ -1041,6 +1148,22 @@ Desktop
 #timeline .time_point:nth-child(even) {
   text-align: right;
   margin-right: 55%;
+}
+
+@media only screen and (min-width:800px) {
+  #timeline .timeline_container {
+    background-image: url(assets/timeline_bar_d.webp);
+  }
+
+  #timeline .time_point:nth-child(odd) {
+  text-align: left;
+  margin-left: 53%;
+}
+
+#timeline .time_point:nth-child(even) {
+  text-align: right;
+  margin-right: 53%;
+}
 }
 
 /* CONTACT */

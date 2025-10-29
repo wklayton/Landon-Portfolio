@@ -5,6 +5,66 @@ setTimeout(() => {
 }, 500);
 
 
+// VARIABLES
+
+// Dropdown
+const menuBtn = document.querySelector(".menu_btn");
+const dropBtn = document.querySelector(".drop_btn");
+const dropLinks = document.querySelectorAll(".drop_link")
+
+
+
+// ACCESSABILITY
+
+// Anything Outside of Menu Closes Dropdown
+window.addEventListener('click', function(e) {
+  if (e.target.className.includes("nav_item") != true) {
+    closeMenu();
+  }
+});
+
+// Escape Key Closes Dropdown and Focuses
+window.addEventListener('keydown', function(e) {
+  if ((e.key === "Escape") && (dropBtn.classList.contains("active"))){
+        this.document.getElementById("dropdown_menu").focus();
+        closeMenu();
+    }
+});
+
+
+
+
+
+// FUNCTION
+
+function expandContent() {
+    if (menuBtn.classList.contains("active") !== true) {
+        openMenu()
+    } else {
+        closeMenu()
+    }
+}
+
+function openMenu() {
+    menuBtn.classList.add("active");
+    dropBtn.classList.add("active");
+    for (var i = 0; i < dropLinks.length; i++) {
+        dropLinks[i].setAttribute("tabindex", 0)
+    }
+}
+
+function closeMenu() {
+    menuBtn.classList.remove("active");
+    dropBtn.classList.remove("active");
+    for (var i = 0; i < dropLinks.length; i++) {
+        dropLinks[i].setAttribute("tabindex", -1)
+    }
+}
+
+
+
+
+
 // Qualifications Button CSS Class Toggle
 const pinkText = document.querySelector(".quals_pink");
 const blueText = document.querySelector(".quals_blue");
