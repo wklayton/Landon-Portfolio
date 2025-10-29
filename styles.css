@@ -121,6 +121,9 @@ ul {
   padding: 0;
 }
 
+svg {
+  pointer-events: none;
+}
 
 /* Custom Styles */
 
@@ -272,18 +275,19 @@ ul {
 }
 
 #navbar .dropdown {
-  width: 15rem;
+  width: 14rem;
   height: 7rem;
   max-height: 0;
   position: absolute;
   top: 125%;
   left: -15%;
-  background-color: var(--black);
+  background: linear-gradient(to bottom, var(--black), var(--black), rgb(30,30,30));
   transition: max-height 0.2s ease-in-out;
   overflow: hidden;
   border-radius: 0.2rem;
   display: flex;
   flex-direction: column;
+  padding-left: 1rem;
 }
 
 #navbar .active .dropdown {
@@ -297,7 +301,6 @@ ul {
   color: var(--white);
   font-weight: 700;
   text-align: left;
-  margin-left: 1rem;
   padding: 0.25rem 0;
 }
 
@@ -430,6 +433,7 @@ ul {
   left: 0;
   border: none;
   user-select: none;
+  pointer-events: none;
 }
 
 #welcome .w_left {

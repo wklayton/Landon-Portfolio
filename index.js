@@ -18,7 +18,7 @@ const dropLinks = document.querySelectorAll(".drop_link")
 
 // Anything Outside of Menu Closes Dropdown
 window.addEventListener('click', function(e) {
-  if (e.target.className.includes("nav_item") != true) {
+  if (e.target.className.includes("drop_item") != true) {
     closeMenu();
   }
 });
