@@ -1127,14 +1127,26 @@ Desktop
   text-align: center;
 }
 
+#timeline .time_point .date {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--lt-gray);
+  opacity: 0.8;
+  margin: 0;
+}
 #timeline .time_point h3 {
   color: var(--lt-gray);
+  font-size: 1.15rem;
 }
 
 #timeline .time_point p {
   color: var(--m-gray);
   font-size: 0.8rem;
+  opacity: 0.8;
+  margin-top: 0.5rem;
 }
+
+
 
 #timeline .time_point {
   margin: 2rem 0 0;
