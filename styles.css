@@ -693,8 +693,8 @@ svg {
 }
 
 #portfolio .card.pre3 {
-  background: url(assets/) center no-repeat, url(https://crypticnerds.com/assets/pharaohs_2.jpg) top center no-repeat;
-  background-size: 60%, cover;
+  background: url(assets/pharaohs_foreground.webp) 85% center no-repeat, url(assets/pharaohs_background.jpg) top center no-repeat;
+  background-size: 35%, cover;
   box-shadow: 0 0 0 0.3rem var(--blue) inset;
 }
 
@@ -873,8 +873,10 @@ svg {
   }
 
   #portfolio .card.pre3 {
-    box-shadow: 0 0 0 0.5rem var(--blue) inset;
-  }
+  background: url(assets/pharaohs_foreground.webp) 85% center no-repeat, url(assets/pharaohs_background.jpg) top center no-repeat;
+  background-size: 27%, cover;
+  box-shadow: 0 0 0 0.5rem var(--blue) inset;
+}
 }
 
 
