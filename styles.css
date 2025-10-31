@@ -1167,17 +1167,26 @@ Desktop
 }
 
 @media only screen and (min-width:800px) {
-  #timeline .timeline_container {
+  /* #timeline .timeline_container {
     background-image: url(assets/timeline_bar_d.webp);
+  } */
+
+  #timeline .time_point .date {
+    font-size: 1.25rem;
+  }
+#timeline .time_point h3 {
+    font-size: 1.5rem;
+  }
+
+#timeline .time_point p {
+    font-size: 0.9rem;
   }
 
   #timeline .time_point:nth-child(odd) {
-  text-align: left;
   margin-left: 53%;
 }
 
 #timeline .time_point:nth-child(even) {
-  text-align: right;
   margin-right: 53%;
 }
 }
