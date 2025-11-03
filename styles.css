@@ -635,6 +635,44 @@ svg {
   }
 }
 
+/* MISSION */
+
+/* Mobile */
+
+#mission {
+  background-color: var(--black);
+  padding: 2rem;
+}
+
+#mission h2 {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+#mission p {
+  color: var(--lt-gray);
+  margin-top: 1rem;
+  opacity: 0.85;
+}
+
+#mission .bold_m {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  opacity: 1;
+}
+
+@media only screen and (min-width:1200px) {
+  #mission {
+    padding: 2rem 8rem;
+  }
+}
+
+@media only screen and (min-width:1800px) {
+  #mission {
+    padding: 2rem 12rem;
+  }
+}
 
 /* PORTFOLIO */
 
