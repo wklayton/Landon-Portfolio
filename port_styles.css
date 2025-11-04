@@ -710,9 +710,38 @@ ul {
   background-color: var(--black);
 }
 
-.port_sect p {
+.port_sect .sect_title{
+  color: var(--white);
+  font-size: 1.75rem;
+  font-weight: 700;
   width: clamp(10rem, 100%, 50rem);
   margin: 0 auto;
+}
+
+.port_sect h2 {
+  color: var(--white);
+  margin: 2rem auto 0;
+  font-size: 1.25rem;
+  width: clamp(10rem, 100%, 50rem);
+}
+
+.port_sect .duties {
+  font-weight: 700;
+}
+
+.port_sect p, .port_sect li {
+  width: clamp(10rem, 100%, 50rem);
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.port_sect ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+}
+
+.port_sect li {
+  color: var(--lt-gray);
 }
 
 @media only screen and (min-width: 1200px) {
@@ -748,7 +777,7 @@ ul {
 .port_sect img, .img_container > * {
   width: clamp(10rem, 100%, 50rem);
   aspect-ratio: 16/9;
-  margin: 0 auto 1rem;
+  margin: 1rem auto;
   object-fit: cover;
   border-radius: 0.25rem;
   overflow: hidden;
@@ -762,5 +791,25 @@ ul {
 
 .port_sect p {
   color: var(--white);
-  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+}
+
+.explore {
+  display: block;
+  padding: 0.5rem 0;
+  background-color: var(--blue);
+  color: var(--black);
+  font-weight: 700;
+  font-size: 1.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease-in-out;
+  text-align: center;
+  margin: 1.5rem auto 0;
+  width: clamp(10rem, 100%, 50rem);
+}
+
+.explore:hover {
+  background-color: var(--lt-blue);
+  color: var(--black);
+  cursor: pointer;
 }
